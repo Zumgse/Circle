@@ -1,0 +1,25 @@
+{
+    "version": "2.0",
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I", "C:/Users/Ryan/Games/RyanMadeGames/Proj1/src/include", // Include path for SFML
+                "-L", "C:/Users/Ryan/Games/RyanMadeGames/Proj1/lib",         // Library path for SFML
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "${workspaceFolder}/main.cpp", // Adjust to your main file
+                "-o", "${workspaceFolder}/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building SFML project"
+        }
+    ]
+}
